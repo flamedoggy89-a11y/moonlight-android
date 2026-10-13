@@ -124,7 +124,7 @@ public class KeyboardTranslator implements InputManager.InputDeviceListener {
 
             for (int i = 0; i <= maxKeyCode; i++) {
                 int deviceKeyCode = device.getKeyCodeForKeyLocation(i);
-                if (deviceKeyCode != KeyEvent.KEYCODE_UNKNOWN) {
+                if (deviceKeyCode != KeyEvent.KEYCODE_UNKNOWN && deviceKeyCode <= maxKeyCode) {
                     deviceKeyCodeToQwertyKeyCode[deviceKeyCode] = i;
                 }
             }
